@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "about": "Hakkımızda",
+    "products": "Ürünler",
+    "soundProof": "Ses Yalıtımlı Konteyner",
+    "lowVoltage": "Alçak Gerilim Panoları",
+    "mediumVoltage": "Orta Gerilim Panoları",
+    "installation": "Kurulum İşleri",
+    "vibrationPads": "Sismik Titreşim Pedi",
+    "externalFuel": "Harici Yakıt Tankı",
+    "automation": "Yakıt Tankı Otomasyonu",
+    "generators": "Jeneratörler",
+    "diesel": "Dizel Jeneratör",
+    "gas": "Gaz Jeneratör",
+    "portable": "Taşınabilir Jeneratör",
+    "catalog": "Katalog",
+    "contact": "İletişim"
+  },
+  "certificate": {
+    "title": "Sertifikalar",
+    "description": "Kalite tesadüf değildir. Bu bir tecrübedir. \nSertifikalarımıza buradan ulaşabilirsiniz."
+  },
+  "blog": {
+    "news": "Haberler",
+    "more": "Devamı",
+    "moreNews": "Tüm Haberler"
+  },
+  "brands": {
+    "title": "Anlaşmalı Firmalar"
+  },
+  "contact": {
+    "desc": "Daha detaylı bilgi ve talepleriniz için mühendislik ekibimizle iletişime geçebilirsiniz."
+  },
+  "counter": {
+    "more": "Daha Fazlası",
+    "slide": "Şirket Sunumu"
+  },
+  "form": {
+    "title": "Teklif Al",
+    "companyInfo": "Firma Bilgileri",
+    "productInfo": "Ürün Bilgileri",
+    "companyName": "Firma Adı",
+    "email": "E-posta",
+    "phone": "Telefon Numarası",
+    "generatorPower": "Jeneratör Gücü (kVa)",
+    "generatorEngine": "Jeneratör Motoru",
+    "generatorHz": "Jeneratör Frekansı (Hz)",
+    "message": "Mesaj",
+    "send": "Gönder",
+    "success": "Teklif formu başarıyla gönderildi!",
+    "error": "Form gönderilirken bir hata oluştu."
+  },
+  "generator": {
+    "model": "Model",
+    "backupPower": "Yedek Güç",
+    "primaryPower": "Birincil Güç",
+    "hz": "Hz",
+    "detail": "Detay",
+    "downloadCatalog": "Kataloğu İndir",
+    "buyNow": "Satın Al"
+  },
+  "services": {
+    "title": "Ürünler & Hizmetler",
+    "detail": "Detaylı Bilgi",
+    "questions": "Sorularınız mı var?",
+    "call": "Sizi arayalım"
+  }
+}

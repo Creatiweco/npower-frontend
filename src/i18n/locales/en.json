@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "about": "About Us",
+    "products": "Products",
+    "soundProof": "Sound Proof Containers",
+    "lowVoltage": "Low Voltage Panels",
+    "mediumVoltage": "Medium Voltage Panels",
+    "installation": "Installation Works",
+    "vibrationPads": "Seismic Vibration Pads",
+    "externalFuel": "External Fuel Tank",
+    "automation": "Fuel Tank Automation",
+    "generators": "Generators",
+    "diesel": "Diesel Generator",
+    "gas": "Gas Generator",
+    "portable": "Portable Generator",
+    "catalog": "Catalog",
+    "contact": "Contact"
+  },
+  "certificate": {
+    "title": "Certificates",
+    "description": "Quality is not a coincidence. It is experience. \nYou can reach our certificates here."
+  },
+  "blog": {
+    "news": "News",
+    "more": "More",
+    "moreNews": "More News"
+  },
+  "brands": {
+    "title": "Contracted Companies"
+  },
+  "contact": {
+    "desc": "For more detailed information and inquiries, please contact our engineering team."
+  },
+  "counter": {
+    "more": "Read More",
+    "slide": "Business Presentation"
+  },
+  "form": {
+    "title": "Get Offer",
+    "companyInfo": "Company Information",
+    "productInfo": "Product Information",
+    "companyName": "Company Name",
+    "email": "E-mail",
+    "phone": "Phone Number",
+    "generatorPower": "Generator Power (kVa)",
+    "generatorEngine": "Generator Engine",
+    "generatorHz": "Generator Hz",
+    "message": "Message",
+    "send": "Send",
+    "success": "The offer form has been successfully submitted!",
+    "error": "Error sending the form."
+  },
+  "generator": {
+    "model": "Model",
+    "backupPower": "Backup Power",
+    "primaryPower": "Primary Power",
+    "hz": "Hz",
+    "detail": "Detail",
+    "downloadCatalog": "Download Catalog",
+    "buyNow": "Buy Now"
+  },
+  "services": {
+    "title": "Products & Services",
+    "detail": "Detailed Information",
+    "questions": "Do you have questions?",
+    "call": "Let us call you"
+  }
+}
+  
