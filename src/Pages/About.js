@@ -6,11 +6,14 @@ import VisionMision from '../Components/VisionMision';
 import AboutCertificate from '../Components/AboutCertificate';
 import useFetch from '../hooks/useFetch.js';
 import Loader from '../Components/Loader.js';
+import { useTranslation } from 'react-i18next';
 
 function About() {
   const { data, loading, error, api } = useFetch(
     '/about-page?populate=WhoAreWe.Image&populate=WhatWeDo.Image&populate=VissionMissionArge.VissionMissionImage&populate=VissionMissionArge.ArgeImage&populate=Certificate.Image'
   );
+
+  const { t } = useTranslation();
 
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -51,7 +54,7 @@ function About() {
 
   return (
     <>
-      <PageTitle title="About"/>
+      <PageTitle title={t("about")} />
       <AboutMain aboutMainData={aboutMainData} />
       <WhatWeDo whatWeDoData={whatWeDoData} />
       <VisionMision visionMisionData={visionMisionData} />

@@ -68,9 +68,14 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="col-8 nav-area">
+              <button className="hamburger-button" onClick={toggleLanguage} style={{ background: 'none', border: 'none' }}>
+                <img src={flagIcon} alt={flagAlt} style={{ width: '20px', marginRight: '10px' }} />
+              </button>
+
               <button className="hamburger-button" onClick={toggleMenu}>
                 <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
               </button>
+
               <ul className={`npower-navbar ${isMenuOpen ? 'open' : ''}`}>
                 <li>
                   <Link to="/about">{t('navbar.about')}</Link>

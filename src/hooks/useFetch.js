@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 function useFetch(endpoint, baseUrl = process.env.REACT_APP_API_BASE_URL) {
   const { i18n } = useTranslation();
+  const lang = i18n.language.split("-")[0]; 
 
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ function useFetch(endpoint, baseUrl = process.env.REACT_APP_API_BASE_URL) {
       try {
         const localizedEndpoint = endpoint.includes("locale=")
           ? endpoint
-          : `${endpoint}${endpoint.includes("?") ? "&" : "?"}locale=${i18n.language}`;
+          : `${endpoint}${endpoint.includes("?") ? "&" : "?"}locale=${lang}`;
 
         const response = await axios.get(`${baseUrl}${localizedEndpoint}`, {
           headers: {
@@ -35,7 +36,7 @@ function useFetch(endpoint, baseUrl = process.env.REACT_APP_API_BASE_URL) {
     };
 
     fetchData();
-  }, [endpoint, baseUrl, i18n.language, token]);
+  }, [endpoint, baseUrl, lang, token]);
 
   return { data, loading, error, api };
 }
