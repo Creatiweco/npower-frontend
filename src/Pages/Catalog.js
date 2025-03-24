@@ -19,7 +19,7 @@ const CatalogItem = ({ img, title, catalogLink }) => {
 
 function Catalog() {
   const { t } = useTranslation();
-  const { data, loading, error, api } = useFetch('/catalog-page?populate=CatalogItem.Image');
+  const { data, loading, error, api } = useFetch('/catalog-page?populate=CatalogItem.Image&populate=CatalogItem.Catalog');
 
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -27,9 +27,9 @@ function Catalog() {
   const catalogItems = data.CatalogItem.map((catalog) => ({
     img: `${api}${catalog.Image[0]?.url}`,
     title: catalog.Title,
-    catalogLink: catalog.Link,
+    catalogLink: `${api}${catalog.Catalog[0]?.url}`,
   }));
-
+  
   return (
     <div className='catalog-area'>
       <div className='container'>

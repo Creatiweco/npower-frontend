@@ -27,7 +27,7 @@ const DieselGenerator = () => {
       yedekGuc: row.YedekGuc,
       birincilGuc: row.BirincilGuc,
       hz: row.Hz,
-      katalogLink: row.KatalogLink,
+      katalogLink: row.katalog?.url ? `${api}${row.katalog.url}` : "",
       detayLink: row.DetayLink,
       content: row.Content,
       image: row.Image?.url ? `${api}${row.Image.url}` : "",

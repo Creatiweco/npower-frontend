@@ -13,7 +13,7 @@ import Loader from '../Components/Loader.js';
 
 function Home() {
   const { data, loading, error, api } = useFetch(
-    '/home-page?populate=Brands.Logo&populate=HeroSection.HeroItem&populate=HeroSection.HeroItem.Image&populate=HeroSection.HeroItem.Background&populate=ServicesSection&populate=ServicesSection.Image&populate=CounterSection.CounterItem.Icon'
+    '/home-page?populate=Brands.Logo&populate=HeroSection.HeroItem&populate=HeroSection.HeroItem.Image&populate=HeroSection.HeroItem.Background&populate=ServicesSection&populate=ServicesSection.Image&populate=CounterSection.CounterItem.Icon&populate=CounterSection.Link2'
   );
 
   const { data: blogsData, loading: blogsLoading, error: blogsError } = useFetch(
@@ -112,7 +112,7 @@ function Home() {
         </div>
       </div>
       <ServicesArea services={services} />
-      <CounterArea counterSection={counterSection} counters={counters} />
+      <CounterArea counterSection={counterSection} counters={counters} api={api}/>
       <FormArea />
       <BlogArea blogs={blogs} />
     </>

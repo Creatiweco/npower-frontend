@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const GeneratorTab = ({ tabs, tableData }) => {
@@ -111,15 +111,16 @@ const GeneratorTab = ({ tabs, tableData }) => {
                           </p>
                         </div>
                       </div>
-                      <Link
-                        to={selectedDetail.katalogLink}
+                      <a
+                        href={selectedDetail.katalogLink}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="table-button d-lg-block d-none"
                       >
                         {pathname.includes("/portable-generator")
                           ? t("generator.buyNow")
                           : t("generator.downloadCatalog")}
-                      </Link>
+                      </a>
                     </div>
                     <div className="row">
                       <div className="col-lg-6 col-12 tab-details-image">

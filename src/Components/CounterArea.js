@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const CounterArea = ({ counterSection, counters }) => {
+const CounterArea = ({ counterSection, counters, api }) => {
   const { t } = useTranslation();
   const [animatedCounters, setAnimatedCounters] = useState([]);
 
@@ -29,7 +29,7 @@ const CounterArea = ({ counterSection, counters }) => {
 
   const description = counterSection.Description?.[0]?.children?.[0]?.text || '';
   const link1 = counterSection.Link1 || '#';
-  const link2 = counterSection.Link2 || '#';
+  const link2 = counterSection.Link2.url || '#';
 
   return (
     <div className="counter-area">
@@ -40,7 +40,7 @@ const CounterArea = ({ counterSection, counters }) => {
           </div>
           <div className="col-12 col-lg-4 counter-link">
             <Link to={link1}>{t('counter.more')}</Link>
-            <Link to={link2}>{t('counter.slide')}</Link>
+            <a target="_blank" rel="noopener noreferrer" href={`${api}${link2}`}>{t('counter.slide')}</a>
           </div>
         </div>
         <div className="counter-grid">
