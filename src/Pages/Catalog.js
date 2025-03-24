@@ -20,8 +20,7 @@ const CatalogItem = ({ img, title, catalogLink }) => {
 function Catalog() {
   const { t } = useTranslation();
   const { data, loading, error, api } = useFetch('/catalog-page?populate=CatalogItem.Image&populate=CatalogItem.Catalog');
-  console.log(data);
-
+  
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
 
