@@ -8,13 +8,22 @@ const FooterItem = ({ title, address, addressLink, number }) => {
     return (
         <div className="footer-item">
             <h3>{title}</h3>
-            <a href={addressLink} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLocationDot} /> {address}
-            </a>
-            <a href={'tel:' + number}><FontAwesomeIcon icon={faPhone} /> {number}</a>
+
+            {address && addressLink && (
+                <a href={addressLink} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faLocationDot} /> {address}
+                </a>
+            )}
+
+            {number && (
+                <a href={'tel:' + number}>
+                    <FontAwesomeIcon icon={faPhone} /> {number}
+                </a>
+            )}
         </div>
     );
 };
+
 
 const Footer = () => {
     const { data, loading, error } = useFetch("/footer?populate=*");
