@@ -5,7 +5,7 @@ import Loader from '../Components/Loader';
 
 const PortatifGeerator = () => {
   const { data, loading, error, api } = useFetch(
-    "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.Image"
+    "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.Image&populate=PortableGenerator.TableRows.katalog"
   );
 
   if (loading) return <div className="loader-container"><Loader/></div>;

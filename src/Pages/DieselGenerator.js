@@ -6,20 +6,20 @@ import Loader from "../Components/Loader";
 
 const DieselGenerator = () => {
   const { data, loading, error, api } = useFetch(
-    "/generator-page?populate=DieselGenerators.TabImage&populate=DieselGenerators.TableRows&populate=DieselGenerators.TableRows.Image"
+    "/generator-page?populate=DieselGenerators.TabImage&populate=DieselGenerators.TableRows&populate=DieselGenerators.TableRows.Image&populate=DieselGenerators.TableRows.katalog"
   );
-
+  
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
-
+  
   const dieselGenerators = data.DieselGenerators || [];
-
+  
   const tabs = dieselGenerators.map((tab) => ({
     key: tab.TabKey,
     label: tab.TabName,
     image: `${api}${tab.TabImage.url}`,
   }));
-
+  
   const tableData = dieselGenerators.reduce((acc, tab) => {
     acc[tab.TabKey] = tab.TableRows.map((row) => ({
       id: row.id,
@@ -33,8 +33,11 @@ const DieselGenerator = () => {
       image: row.Image?.url ? `${api}${row.Image.url}` : "",
     }));
     return acc;
+    
   }, {});
 
+  console.log(tableData.katalogLink);
+  
   return (
     <>
       <PageTitle title="Dizel Jeneratör Setleri" />

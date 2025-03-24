@@ -6,7 +6,7 @@ import Loader from '../Components/Loader';
 
 const GasGenerator = () => {
   const { data, loading, error, api } = useFetch(
-    "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.Image"
+    "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.Image&populate=GasGenerators.TableRows.katalog"
   );
 
   if (loading) return <div className="loader-container"><Loader/></div>;
