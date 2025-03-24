@@ -65,6 +65,12 @@
     "questions": "Do you have questions?",
     "call": "Let us call you"
   },
-  "about": "About"
+  "about": "About",
+  "catalog": {
+    "title": "Catalogs and Brochures",
+    "description": "You can find catalogs and brochures about NPower products here.",
+    "download": "Download"
+  }
+  
 }
   

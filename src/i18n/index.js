@@ -11,11 +11,11 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // Tarayıcı dilini algılar
+  .use(LanguageDetector) 
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en', // varsayılan dil
+    fallbackLng: 'en', 
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage']

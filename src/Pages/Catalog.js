@@ -1,18 +1,24 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
+import { useTranslation } from 'react-i18next';
 
 const CatalogItem = ({ img, title, catalogLink }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className='catalog-item'>
       <img src={img} alt={title} />
       <p>{title}</p>
-      <a href={catalogLink} target="_blank" rel="noopener noreferrer">İndir</a>
+      <a href={catalogLink} target="_blank" rel="noopener noreferrer">
+        {t('catalog.download')}
+      </a>
     </div>
   );
 };
 
 function Catalog() {
+  const { t } = useTranslation();
   const { data, loading, error, api } = useFetch('/catalog-page?populate=CatalogItem.Image');
 
   if (loading) return <div className="loader-container"><Loader/></div>;
@@ -27,8 +33,8 @@ function Catalog() {
   return (
     <div className='catalog-area'>
       <div className='container'>
-        <h2 className='catalog-title'>Catalogs and Brochures</h2>
-        <p className='catalog-description'>You can find catalogs and brochures about NPower products here.</p>
+        <h2 className='catalog-title'>{t('catalog.title')}</h2>
+        <p className='catalog-description'>{t('catalog.description')}</p>
         <div className='catalog-grid'>
           {catalogItems.map((catalog, index) => (
             <CatalogItem

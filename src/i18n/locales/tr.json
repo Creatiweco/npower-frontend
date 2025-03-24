@@ -65,5 +65,12 @@
     "questions": "Sorularınız mı var?",
     "call": "Sizi arayalım"
   },
-  "about": "Hakkımızda"
+  "about": "Hakkımızda",
+  "catalog": {
+    "title": "Kataloglar ve Broşürler",
+    "description": "NPower ürünlerine ait katalog ve broşürleri burada bulabilirsiniz.",
+    "download": "İndir"
+  }
+  
+
 }
