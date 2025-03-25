@@ -57,7 +57,10 @@
     "hz": "Hz",
     "detail": "Detail",
     "downloadCatalog": "Download Catalog",
-    "buyNow": "Buy Now"
+    "buyNow": "Buy Now",
+    "dieselTitle": "Diesel Generator Sets",
+    "gasTitle": "Gas Generator Sets",
+    "portableTitle": "Portable Generator Sets"
   },
   "services": {
     "title": "Products & Services",
@@ -70,11 +73,6 @@
     "title": "Catalogs and Brochures",
     "description": "You can find catalogs and brochures about NPower products here.",
     "download": "Download"
-  },
-  "generator": {
-     "dieselTitle": "Diesel Generator Sets",
-     "gasTitle": "Gas Generator Sets",
-     "portableTitle": "Portable Generator Sets"
   }
 }
   
