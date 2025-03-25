@@ -3,11 +3,13 @@ import PageTitle from '../Components/PageTitle';
 import GeneratorTab from '../Components/GeneratorTab';
 import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
+import { useTranslation } from "react-i18next";
 
 const GasGenerator = () => {
   const { data, loading, error, api } = useFetch(
     "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.Image&populate=GasGenerators.TableRows.katalog"
   );
+   const { t } = useTranslation();
 
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -38,7 +40,7 @@ const GasGenerator = () => {
 
   return (
     <>
-      <PageTitle title="Gaz Jeneratör Setleri" />
+      <PageTitle title={t("generator.gasTitle")} />
       <GeneratorTab tabs={tabs} tableData={tableData} />
     </>
   );
