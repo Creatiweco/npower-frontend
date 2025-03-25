@@ -70,7 +70,13 @@
     "title": "Kataloglar ve Broşürler",
     "description": "NPower ürünlerine ait katalog ve broşürleri burada bulabilirsiniz.",
     "download": "İndir"
+  },
+  "generator": {
+     "dieselTitle": "Dizel Jeneratör Setleri",
+     "gasTitle": "Gaz Jeneratör Setleri",
+     "portableTitle": "Portatif Jeneratör Setleri"
   }
+
   
 
 }
