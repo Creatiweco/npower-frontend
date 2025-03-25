@@ -71,11 +71,10 @@
     "description": "You can find catalogs and brochures about NPower products here.",
     "download": "Download"
   },
-  “generator": {
+  "generator": {
      “dieselTitle": “Diesel Generator Sets”,
      “gasTitle": “Gas Generator Sets”,
      “portableTitle": “Portable Generator Sets”
   }
-  
 }
   
