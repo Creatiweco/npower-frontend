@@ -2,11 +2,13 @@ import PageTitle from '../Components/PageTitle';
 import GeneratorTab from '../Components/GeneratorTab';
 import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
+import { useTranslation } from "react-i18next";
 
 const PortatifGeerator = () => {
   const { data, loading, error, api } = useFetch(
     "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.Image&populate=PortableGenerator.TableRows.katalog"
   );
+  const { t } = useTranslation();
 
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -37,7 +39,7 @@ const PortatifGeerator = () => {
 
   return (
     <>
-      <PageTitle title="Portable Generator Sets" />
+      <PageTitle title={t("generator.portableTitle")} />
       <GeneratorTab tabs={tabs} tableData={tableData} />
     </>
   );
