@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const CounterArea = ({ counterSection, counters, api }) => {
+const CounterArea = ({ counterSection, counters}) => {
   const { t } = useTranslation();
   const [animatedCounters, setAnimatedCounters] = useState([]);
 
@@ -40,7 +40,7 @@ const CounterArea = ({ counterSection, counters, api }) => {
           </div>
           <div className="col-12 col-lg-4 counter-link">
             <Link to={link1}>{t('counter.more')}</Link>
-            <a target="_blank" rel="noopener noreferrer" href={`${api}${link2}`}>{t('counter.slide')}</a>
+            <a target="_blank" rel="noopener noreferrer" href={`${link2}`}>{t('counter.slide')}</a>
           </div>
         </div>
         <div className="counter-grid">

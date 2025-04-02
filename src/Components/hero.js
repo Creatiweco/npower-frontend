@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Hero = ({ heroData, api }) => {
+const Hero = ({ heroData}) => {
   if (!heroData) return null;
 
   const items = heroData.HeroItem || [];
@@ -15,7 +15,7 @@ const Hero = ({ heroData, api }) => {
               to={`/${item.Link}`}
               className="hero-item"
               key={item.id}
-              style={{ backgroundImage: `url(${api + item.Background[0]?.url})` }}
+              style={{ backgroundImage: `url(${item.Background[0]?.url})` }}
             >
               <p>{item.Title}</p>
               {item.Description?.map((desc, index) => (
@@ -23,7 +23,7 @@ const Hero = ({ heroData, api }) => {
                   {desc.children?.map((child, childIndex) => child.text)}
                 </p>
               ))}
-              {item.Image?.[0] && <img src={api + item.Image[0].url} alt={item.Title} />}
+              {item.Image?.[0] && <img src={item.Image[0].url} alt={item.Title} />}
             </Link>
           ))}
         </div>

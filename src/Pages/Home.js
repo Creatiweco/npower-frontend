@@ -12,7 +12,7 @@ import useFetch from '../hooks/useFetch.js';
 import Loader from '../Components/Loader.js';
 
 function Home() {
-  const { data, loading, error, api} = useFetch(
+  const { data, loading, error} = useFetch(
     '/home-page?populate=Brands.Logo&populate=HeroSection.HeroItem&populate=HeroSection.HeroItem.Image&populate=HeroSection.HeroItem.Background&populate=ServicesSection&populate=ServicesSection.Image&populate=CounterSection.CounterItem.Icon&populate=CounterSection.Link2'
   );
 
@@ -73,7 +73,7 @@ function Home() {
 
   return (
     <>
-      <Hero heroData={heroData} api={api} />
+      <Hero heroData={heroData}/>
       <div className="brand-area">
         <div className="container">
           <Swiper
@@ -112,7 +112,7 @@ function Home() {
         </div>
       </div>
       <ServicesArea services={services} />
-      <CounterArea counterSection={counterSection} counters={counters} api={api}/>
+      <CounterArea counterSection={counterSection} counters={counters}/>
       <FormArea />
       <BlogArea blogs={blogs} />
     </>
