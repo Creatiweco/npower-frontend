@@ -11,7 +11,7 @@
     "automation": "Fuel Tank Automation",
     "generators": "Generators",
     "diesel": "Diesel Generator",
-    "gas": "Gas Generator",
+    "gas": "Natural Gas Generator",
     "portable": "Portable Generator",
     "catalog": "Catalog",
     "contact": "Contact"
@@ -59,7 +59,7 @@
     "downloadCatalog": "Download Catalog",
     "buyNow": "Buy Now",
     "dieselTitle": "Diesel Generator Sets",
-    "gasTitle": "Gas Generator Sets",
+    "gasTitle": "Natural Gas Generator Sets",
     "portableTitle": "Portable Generator Sets"
   },
   "services": {

@@ -20,7 +20,7 @@ function DisYakit() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${Image[0]?.url}`} 
+        image={`${Image[0]?.url}`} 
         content={Content[0]?.children[0]?.text || ''} 
       />
       

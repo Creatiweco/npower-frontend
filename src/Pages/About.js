@@ -22,7 +22,7 @@ function About() {
     title: data.WhoAreWe?.Title || "Title Not Found",
     subtitle: data.WhoAreWe?.Subtitle || "No Subheading Found",
     description: data.WhoAreWe?.Description?.[0]?.children?.[0]?.text || "No explanation found.",
-    image: `${api}${data.WhoAreWe?.Image?.url || ''}`,
+    image: `${data.WhoAreWe?.Image?.url || ''}`,
     imageAlt: data.WhoAreWe?.Image?.alternativeText || data.WhoAreWe?.Title,
   };
 
@@ -30,7 +30,7 @@ function About() {
     title: data.WhatWeDo?.Title || "Başlık Bulunamadı",
     description1: data.WhatWeDo?.Description1?.[0]?.children?.[0]?.text || "Explanation 1 not found.",
     description2: data.WhatWeDo?.Description2?.[0]?.children?.[0]?.text || "Explanation 2 not found.",
-    image: `${api}${data.WhatWeDo?.Image?.[0]?.url || ''}`,
+    image: `${data.WhatWeDo?.Image?.[0]?.url || ''}`,
     imageAlt: data.WhatWeDo?.Image?.[0]?.alternativeText || data.WhatWeDo?.Title,
   };
 
@@ -43,12 +43,12 @@ function About() {
     argeDescription: data.VissionMissionArge?.ArgeDescription?.map(
       (desc) => desc.children?.[0]?.text
     ).filter(Boolean) || [],
-    vissionMissionImage: `${api}${data.VissionMissionArge?.VissionMissionImage?.url || ''}`,
-    argeImage: `${api}${data.VissionMissionArge?.ArgeImage?.url || ''}`,
+    vissionMissionImage: `${data.VissionMissionArge?.VissionMissionImage?.url || ''}`,
+    argeImage: `${data.VissionMissionArge?.ArgeImage?.url || ''}`,
   };
 
   const aboutCertificateData = data.Certificate?.map((certificate) => ({
-    img: `${api}${certificate.Image?.url}`,
+    img: `${certificate.Image?.url}`,
     title: certificate.Title,
   })) || [];
 

@@ -18,7 +18,7 @@ const PortatifGeerator = () => {
   const tabs = PortableGenerator.map((tab) => ({
     key: tab.TabKey,
     label: tab.TabName,
-    image: `${api}${tab.TabImage.url}`,
+    image: `${tab.TabImage.url}`,
   }));
 
   const tableData = PortableGenerator.reduce((acc, tab) => {
@@ -31,7 +31,7 @@ const PortatifGeerator = () => {
       katalogLink: row.KatalogLink,
       detayLink: row.DetayLink,
       content: row.Content,
-      image: row.Image?.url ? `${api}${row.Image.url}` : "",
+      image: row.Image?.url ? `${row.Image.url}` : "",
     }));
     return acc;
   }, {});

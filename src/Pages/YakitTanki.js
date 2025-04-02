@@ -26,7 +26,7 @@ function YakitTanki() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${imageUrl}`} 
+        image={`${imageUrl}`} 
         content={contentHtml} 
       />
       <ContactDesc />

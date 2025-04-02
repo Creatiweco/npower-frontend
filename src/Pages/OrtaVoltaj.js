@@ -18,7 +18,7 @@ function OrtaVoltaj() {
         <>
             <PageTitle title={Title} />
             <ProductMain 
-                image={`${api}${MainImage.url}`} 
+                image={`${MainImage.url}`} 
                 content={Content.map(block => block.children.map(child => child.text).join('')).join('<br><br>')} 
             />
 

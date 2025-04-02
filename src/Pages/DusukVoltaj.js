@@ -27,7 +27,7 @@ function DusukVoltaj() {
     <>
       <PageTitle title={Title} />
       <ProductMain
-        image={`${api}${MainImage.url}`}
+        image={`${MainImage.url}`}
         content={Content.map((block) =>
           block.children.map((child) => child.text).join('')
         ).join('<br><br>')}
@@ -37,7 +37,7 @@ function DusukVoltaj() {
           <div className="row">
             <div className="col-lg-4 features-head">
               <h2>{FeaturesHead.Title}</h2>
-              <img src={`${api}${FeaturesHead.Icon[0]?.url}`} alt="" />
+              <img src={`${FeaturesHead.Icon[0]?.url}`} alt="" />
             </div>
             <div className="col-lg-8 features-body">
               <p

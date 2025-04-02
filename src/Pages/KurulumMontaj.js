@@ -20,7 +20,7 @@ function KurulumMontaj() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${Image[0]?.url}`} 
+        image={`${Image[0]?.url}`} 
         content={contentHtml} 
       />
       <ContactDesc />

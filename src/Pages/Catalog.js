@@ -25,9 +25,9 @@ function Catalog() {
   if (error) return <div>Error: {error.message}</div>;
 
   const catalogItems = data.CatalogItem.map((catalog) => ({
-    img: `${api}${catalog.Image[0]?.url}`,
+    img: `${catalog.Image[0]?.url}`,
     title: catalog.Title,
-    catalogLink: `${api}${catalog.Catalog.url}`,
+    catalogLink: `${catalog.Catalog.url}`,
   }));
   
   

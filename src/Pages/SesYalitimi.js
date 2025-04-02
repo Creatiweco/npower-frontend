@@ -25,7 +25,7 @@ function SesYalitimi() {
     <>
       <PageTitle title={Title} />
       <ProductMain
-        image={`${api}${MainImage.url}`}
+        image={`${MainImage.url}`}
         content={Content.map(paragraph => paragraph.children.map(child => child.text).join('')).join('<br/>')}
       />
 
@@ -47,7 +47,7 @@ function SesYalitimi() {
                 </div>
                 <div className="col-lg-7 col-12 generator-image">
                   <img
-                    src={`${api}${generator.SoundProofGeneratorImage.url}`}
+                    src={`${generator.SoundProofGeneratorImage.url}`}
                     alt="Generator"
                   />
                 </div>
@@ -63,7 +63,7 @@ function SesYalitimi() {
             <div className="col-lg-3 features-head">
               <h2>{SoundProofFeatures.FeaturesTitle}</h2>
               <img
-                src={`${api}${SoundProofFeatures.FeaturesImage.url}`}
+                src={`${SoundProofFeatures.FeaturesImage.url}`}
                 alt="Features Icon"
               />
             </div>

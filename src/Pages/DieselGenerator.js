@@ -19,7 +19,7 @@ const DieselGenerator = () => {
   const tabs = dieselGenerators.map((tab) => ({
     key: tab.TabKey,
     label: tab.TabName,
-    image: `${api}${tab.TabImage.url}`,
+    image: `${tab.TabImage.url}`,
   }));
   
   const tableData = dieselGenerators.reduce((acc, tab) => {
@@ -29,10 +29,10 @@ const DieselGenerator = () => {
       yedekGuc: row.YedekGuc,
       birincilGuc: row.BirincilGuc,
       hz: row.Hz,
-      katalogLink: row.katalog?.url ? `${api}${row.katalog.url}` : "",
+      katalogLink: row.katalog?.url ? `${row.katalog.url}` : "",
       detayLink: row.DetayLink,
       content: row.Content,
-      image: row.Image?.url ? `${api}${row.Image.url}` : "",
+      image: row.Image?.url ? `${row.Image.url}` : "",
     }));
     return acc;
     
