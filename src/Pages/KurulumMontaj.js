@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function KurulumMontaj() {
-  const { data, loading, error, api } = useFetch('/installation-page?populate=Image');
+  const { data, loading, error} = useFetch('/installation-page?populate=Image');
 
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -20,7 +20,7 @@ function KurulumMontaj() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${Image[0]?.url}`} 
+        image={`${Image[0]?.url}`} 
         content={contentHtml} 
       />
       <ContactDesc />

@@ -3,11 +3,13 @@ import useFetch from "../hooks/useFetch";
 import PageTitle from "../Components/PageTitle";
 import GeneratorTab from "../Components/GeneratorTab";
 import Loader from "../Components/Loader";
+import { useTranslation } from "react-i18next";
 
 const DieselGenerator = () => {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     "/generator-page?populate=DieselGenerators.TabImage&populate=DieselGenerators.TableRows&populate=DieselGenerators.TableRows.Image&populate=DieselGenerators.TableRows.katalog"
   );
+  const { t } = useTranslation();
   
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -17,7 +19,7 @@ const DieselGenerator = () => {
   const tabs = dieselGenerators.map((tab) => ({
     key: tab.TabKey,
     label: tab.TabName,
-    image: `${api}${tab.TabImage.url}`,
+    image: `${tab.TabImage.url}`,
   }));
   
   const tableData = dieselGenerators.reduce((acc, tab) => {
@@ -27,10 +29,10 @@ const DieselGenerator = () => {
       yedekGuc: row.YedekGuc,
       birincilGuc: row.BirincilGuc,
       hz: row.Hz,
-      katalogLink: row.katalog?.url ? `${api}${row.katalog.url}` : "",
+      katalogLink: row.katalog?.url ? `${row.katalog.url}` : "",
       detayLink: row.DetayLink,
       content: row.Content,
-      image: row.Image?.url ? `${api}${row.Image.url}` : "",
+      image: row.Image?.url ? `${row.Image.url}` : "",
     }));
     return acc;
     
@@ -40,7 +42,7 @@ const DieselGenerator = () => {
   
   return (
     <>
-      <PageTitle title="Dizel Jeneratör Setleri" />
+      <PageTitle title={t("generator.dieselTitle")} />
       <GeneratorTab tabs={tabs} tableData={tableData} />
     </>
   );

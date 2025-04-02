@@ -11,7 +11,7 @@
     "automation": "Fuel Tank Automation",
     "generators": "Generators",
     "diesel": "Diesel Generator",
-    "gas": "Gas Generator",
+    "gas": "Natural Gas Generator",
     "portable": "Portable Generator",
     "catalog": "Catalog",
     "contact": "Contact"
@@ -57,7 +57,10 @@
     "hz": "Hz",
     "detail": "Detail",
     "downloadCatalog": "Download Catalog",
-    "buyNow": "Buy Now"
+    "buyNow": "Buy Now",
+    "dieselTitle": "Diesel Generator Sets",
+    "gasTitle": "Natural Gas Generator Sets",
+    "portableTitle": "Portable Generator Sets"
   },
   "services": {
     "title": "Products & Services",
@@ -71,6 +74,5 @@
     "description": "You can find catalogs and brochures about NPower products here.",
     "download": "Download"
   }
-  
 }
   

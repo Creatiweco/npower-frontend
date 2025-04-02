@@ -1467,7 +1467,6 @@ form .form-group .message-input {
 }
 .vision-col img {
   width: 120px;
-  height: 110%;
   position: relative;
   left: -40px;
   backdrop-filter: blur(15px);
@@ -1526,7 +1525,6 @@ form .form-group .message-input {
 }
 .arge-col img {
   width: 120px;
-  height: 110%;
   position: relative;
   right: -40px;
   backdrop-filter: blur(15px);

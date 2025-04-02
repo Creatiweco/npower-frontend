@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function SismikTitresim() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/seismic-vibration-page?populate=MainImage&populate=RightImage&populate=BrandLogos.Image'
   );
 
@@ -33,7 +33,7 @@ function SismikTitresim() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${MainImage[0]?.url}`} 
+        image={`${MainImage[0]?.url}`} 
         content={contentText} 
       />
 
@@ -44,7 +44,7 @@ function SismikTitresim() {
               <p dangerouslySetInnerHTML={{ __html: leftSectionText }} />
             </div>
             <div className="col-lg-6 col-12 siesmic-right">
-              <img src={`${api}${RightImage[0]?.url}`} alt='' />
+              <img src={`${RightImage[0]?.url}`} alt='' />
             </div>
           </div>
         </div>

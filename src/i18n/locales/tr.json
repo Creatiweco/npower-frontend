@@ -57,7 +57,10 @@
     "hz": "Hz",
     "detail": "Detay",
     "downloadCatalog": "Kataloğu İndir",
-    "buyNow": "Satın Al"
+    "buyNow": "Satın Al",
+    "dieselTitle": "Dizel Jeneratör Setleri",
+     "gasTitle": "Gaz Jeneratör Setleri",
+     "portableTitle": "Portatif Jeneratör Setleri"
   },
   "services": {
     "title": "Ürünler & Hizmetler",
@@ -71,6 +74,4 @@
     "description": "NPower ürünlerine ait katalog ve broşürleri burada bulabilirsiniz.",
     "download": "İndir"
   }
-  
-
 }

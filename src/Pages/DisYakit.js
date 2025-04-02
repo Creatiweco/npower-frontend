@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function DisYakit() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/outer-fuel-tank?populate=Image&populate=OuterFuelTank'
   );
 
@@ -20,7 +20,7 @@ function DisYakit() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${api}${Image[0]?.url}`} 
+        image={`${Image[0]?.url}`} 
         content={Content[0]?.children[0]?.text || ''} 
       />
       
