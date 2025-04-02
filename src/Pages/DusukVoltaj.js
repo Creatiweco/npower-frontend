@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function DusukVoltaj() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/low-voltage-page?populate=MainImage&populate=FeaturesHead.Icon&populate=Brands&populate=FeaturesRight'
   );
 

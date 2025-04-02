@@ -5,7 +5,7 @@ import Loader from '../Components/Loader';
 import { useTranslation } from "react-i18next";
 
 const PortatifGeerator = () => {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.Image&populate=PortableGenerator.TableRows.katalog"
   );
   const { t } = useTranslation();

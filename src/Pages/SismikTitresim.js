@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function SismikTitresim() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/seismic-vibration-page?populate=MainImage&populate=RightImage&populate=BrandLogos.Image'
   );
 

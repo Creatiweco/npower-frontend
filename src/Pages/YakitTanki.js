@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function YakitTanki() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/fuel-tank-page?populate=Image'
   );
 

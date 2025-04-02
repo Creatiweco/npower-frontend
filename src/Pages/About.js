@@ -9,7 +9,7 @@ import Loader from '../Components/Loader.js';
 import { useTranslation } from 'react-i18next';
 
 function About() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/about-page?populate=WhoAreWe.Image&populate=WhatWeDo.Image&populate=VissionMissionArge.VissionMissionImage&populate=VissionMissionArge.ArgeImage&populate=Certificate.Image'
   );
 

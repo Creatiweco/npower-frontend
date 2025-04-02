@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
 
 function SesYalitimi() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/sound-proof-container?populate=MainImage&populate=SoundProofGeneratorData.GeneratorDataDescription&populate=SoundProofGeneratorData.GeneratorDataFeatures&populate=SoundProofGeneratorData.SoundProofGeneratorImage&populate=SoundProofFeatures.FeaturesImage&populate=SoundProofFeatures.SoundProofFeaturItems'
   );
 

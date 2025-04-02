@@ -6,7 +6,7 @@ import Loader from '../Components/Loader';
 import { useTranslation } from "react-i18next";
 
 const GasGenerator = () => {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.Image&populate=GasGenerators.TableRows.katalog"
   );
    const { t } = useTranslation();
