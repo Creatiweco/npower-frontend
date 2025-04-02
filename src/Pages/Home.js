@@ -12,7 +12,7 @@ import useFetch from '../hooks/useFetch.js';
 import Loader from '../Components/Loader.js';
 
 function Home() {
-  const { data, loading, error} = useFetch(
+  const { data, loading, error, api} = useFetch(
     '/home-page?populate=Brands.Logo&populate=HeroSection.HeroItem&populate=HeroSection.HeroItem.Image&populate=HeroSection.HeroItem.Background&populate=ServicesSection&populate=ServicesSection.Image&populate=CounterSection.CounterItem.Icon&populate=CounterSection.Link2'
   );
 
@@ -97,7 +97,7 @@ function Home() {
             {logos.map((logo) => (
               <SwiperSlide key={logo.id}>
                 <img
-                  src={api + logo.url}
+                  src={logo.url}
                   alt={logo.alt}
                   style={{
                     height: "40px",
