@@ -12,7 +12,7 @@ import useFetch from '../hooks/useFetch.js';
 import Loader from '../Components/Loader.js';
 
 function Home() {
-  const { data, loading, error, api } = useFetch(
+  const { data, loading, error} = useFetch(
     '/home-page?populate=Brands.Logo&populate=HeroSection.HeroItem&populate=HeroSection.HeroItem.Image&populate=HeroSection.HeroItem.Background&populate=ServicesSection&populate=ServicesSection.Image&populate=CounterSection.CounterItem.Icon&populate=CounterSection.Link2'
   );
 
@@ -38,7 +38,7 @@ function Home() {
 
     return {
       id: service.id,
-      img: `${api}${service.Image?.[0]?.url}`,
+      img: `${service.Image?.[0]?.url}`,
       title: service.Title,
       description: description,
       link: service.Link,
@@ -50,7 +50,7 @@ function Home() {
     id: counter.id,
     title: counter.Title,
     value: counter.Value,
-    icon: `${api}${counter.Icon?.[0]?.url}`,
+    icon: `${counter.Icon?.[0]?.url}`,
   })) || [];
 
   const blogs = blogsData?.slice(0, 3).map((blog) => {
@@ -66,7 +66,7 @@ function Home() {
         (content) => content.__component === "blog-content.blog-content"
       )?.Content?.[0]?.children?.[0]?.text || "",
       date: new Date(blog.PublishedTime).toLocaleDateString("tr-TR"),
-      img: `${api}${featuredImage}`,
+      img: `${featuredImage}`,
       link: `/blogs/${blog.Slug}`,
     };
   }) || [];
