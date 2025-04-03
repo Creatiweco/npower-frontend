@@ -3,11 +3,12 @@ import PageTitle from '../Components/PageTitle';
 import GeneratorTab from '../Components/GeneratorTab';
 import useFetch from '../hooks/useFetch';
 import Loader from '../Components/Loader';
+import GeneratorDesc from '../Components/GeneratorDesc';
 import { useTranslation } from "react-i18next";
 
 const GasGenerator = () => {
   const { data, loading, error} = useFetch(
-    "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.Image&populate=GasGenerators.TableRows.katalog"
+    "/generator-page?populate=GasGenerators.TabImage&populate=GasGenerators.TableRows&populate=GasGenerators.TableRows.katalog"
   );
    const { t } = useTranslation();
 
@@ -32,7 +33,7 @@ const GasGenerator = () => {
       katalogLink: row.KatalogLink,
       detayLink: row.DetayLink,
       content: row.Content,
-      image: row.Image?.url ? `${row.Image.url}` : "",
+      // image: row.Image?.url ? `${row.Image.url}` : "",
     }));
     return acc;
   }, {});
@@ -42,6 +43,7 @@ const GasGenerator = () => {
     <>
       <PageTitle title={t("generator.gasTitle")} />
       <GeneratorTab tabs={tabs} tableData={tableData} />
+      <GeneratorDesc/>
     </>
   );
 };

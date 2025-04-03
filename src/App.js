@@ -19,6 +19,8 @@ import OrtaVoltaj from "./Pages/OrtaVoltaj.js";
 import SismikTitresim from "./Pages/SismikTitresim.js";
 import BlogSingle from "./Pages/BlogSingle.js";
 import BlogList from "./Pages/BlogList.js";
+import Product from "./Pages/Product.js";
+import MediumDieselGenerator from "./Pages/MediumDieselGenerator.js";
 
 function App() {
   const location = useLocation();
@@ -41,13 +43,15 @@ function App() {
         <Route path="/installation-works" element={<KurulumMontaj />} />
         <Route path="/external-fuel-tanks" element={<DisYakit />} />
         <Route path="/fuel-tank-automation" element={<YakitTanki />} />
-        <Route path="/diesel-generator" element={<DieselGenerator />} />
+        <Route path="/diesel-generator-low-voltage" element={<DieselGenerator />} />
+        <Route path="/diesel-generator-medium-voltage" element={<MediumDieselGenerator />} />
         <Route path="/gas-generator" element={<GasGenerator />} />
         <Route path="/portable-generator" element={<PortatifGeerator />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blogs/:slug" element={<BlogSingle />} />
         <Route path="/blogs" element={<BlogList />} />
+        <Route path="/products" element={<Product />} />
       </Routes>
       <Footer />
       <BackToTop />

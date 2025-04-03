@@ -81,7 +81,7 @@ const Navbar = () => {
                   <Link to="/about">{t('navbar.about')}</Link>
                 </li>
                 <li className="dropdown-link">
-                  <Link to="#" onClick={(e) => e.preventDefault()}>{t('navbar.products')}</Link>
+                  <Link to="/products">{t('navbar.products')}</Link>
                   <ul className='dropdown'>
                     <li className='dropdown-item'>
                       <div className='dropdown-icon'><img src='/Assets/image/icon/ses-izolasyonlu-konteynir.svg' alt='' /></div>
@@ -118,7 +118,11 @@ const Navbar = () => {
                   <ul className='dropdown'>
                     <li className='dropdown-item'>
                       <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
-                      <Link to="/diesel-generator">{t('navbar.diesel')}</Link>
+                      <Link to="/diesel-generator-low-voltage">{t('navbar.diesel')}</Link>
+                    </li>
+                    <li className='dropdown-item'>
+                      <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
+                      <Link to="/diesel-generator-medium-voltage">{t('navbar.dieselMedium')}</Link>
                     </li>
                     <li className='dropdown-item'>
                       <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>

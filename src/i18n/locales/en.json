@@ -10,7 +10,8 @@
     "externalFuel": "External Fuel Tank",
     "automation": "Fuel Tank Automation",
     "generators": "Generators",
-    "diesel": "Diesel Generator",
+    "diesel": "Diesel Generator (Low Voltage)",
+    "dieselMedium": "Diesel Generator (Medium Voltage)",
     "gas": "Natural Gas Generator",
     "portable": "Portable Generator",
     "catalog": "Catalog",
@@ -29,7 +30,8 @@
     "title": "Contracted Companies"
   },
   "contact": {
-    "desc": "For more detailed information and inquiries, please contact our engineering team."
+    "desc": "For more detailed information and inquiries, please contact our engineering team.",
+    "generator": "Contact our engineering team now for comparative information on other generator companies and customized solutions."
   },
   "counter": {
     "more": "Read More",
@@ -58,7 +60,8 @@
     "detail": "Detail",
     "downloadCatalog": "Download Catalog",
     "buyNow": "Buy Now",
-    "dieselTitle": "Diesel Generator Sets",
+    "dieselTitle": "Diesel Generator Sets (Low Voltage)",
+    "dieselTitleMedium": "Diesel Generator Sets (Medium Voltage)",
     "gasTitle": "Natural Gas Generator Sets",
     "portableTitle": "Portable Generator Sets"
   },
@@ -73,6 +76,7 @@
     "title": "Catalogs and Brochures",
     "description": "You can find catalogs and brochures about NPower products here.",
     "download": "Download"
-  }
+  },
+  "products": "Products"
 }
   

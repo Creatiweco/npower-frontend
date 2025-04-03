@@ -2330,6 +2330,33 @@ h3 {
   transform: translate(-50%, -50%) rotateY(180deg);
 }
 
+/*Products*/
+.product-wrapper {
+  padding: 80px 0 80px 0;
+}
+.product-wrapper .product-item {
+  margin-bottom: 40px;
+  justify-content: center;
+  background-color: rgb(228, 242, 243);
+  padding: 25px 0;
+}
+.product-wrapper .product-item .product-content {
+  display: flex;
+  align-items: center;
+}
+.product-wrapper .product-item .product-content h3 {
+  color: #007A80;
+  padding-bottom: 12px;
+}
+.product-wrapper .product-item .product-content img {
+  border-radius: 10px;
+  width: 100%;
+}
+.product-wrapper .product-item .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 480px) {
   /*Ana Sayfa*/
   .blog-area .swiper-slide {

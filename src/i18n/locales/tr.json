@@ -10,7 +10,8 @@
     "externalFuel": "Harici Yakıt Tankı",
     "automation": "Yakıt Tankı Otomasyonu",
     "generators": "Jeneratörler",
-    "diesel": "Dizel Jeneratör",
+    "diesel": "Dizel Jeneratör (Alçak Gerilim)",
+    "dieselMedium": "Dizel Jeneratör (Orta Gerilim)",
     "gas": "Gaz Jeneratör",
     "portable": "Taşınabilir Jeneratör",
     "catalog": "Katalog",
@@ -29,7 +30,8 @@
     "title": "Anlaşmalı Firmalar"
   },
   "contact": {
-    "desc": "Daha detaylı bilgi ve talepleriniz için mühendislik ekibimizle iletişime geçebilirsiniz."
+    "desc": "Daha detaylı bilgi ve talepleriniz için mühendislik ekibimizle iletişime geçebilirsiniz.",
+    "generator": "Diğer jeneratör firmalarına yönelik karşılaştırmalı bilgiler ve size özel çözümler için hemen mühendislik ekibimizle iletişime geçin."
   },
   "counter": {
     "more": "Daha Fazlası",
@@ -58,9 +60,10 @@
     "detail": "Detay",
     "downloadCatalog": "Kataloğu İndir",
     "buyNow": "Satın Al",
-    "dieselTitle": "Dizel Jeneratör Setleri",
-     "gasTitle": "Gaz Jeneratör Setleri",
-     "portableTitle": "Portatif Jeneratör Setleri"
+    "dieselTitle": "Dizel Jeneratör Setleri (Alçak Gerilim)",
+    "dieselTitleMedium": "Dizel Jeneratör Setleri (Orta Gerilim)",
+    "gasTitle": "Gaz Jeneratör Setleri",
+    "portableTitle": "Portatif Jeneratör Setleri"
   },
   "services": {
     "title": "Ürünler & Hizmetler",
@@ -73,5 +76,6 @@
     "title": "Kataloglar ve Broşürler",
     "description": "NPower ürünlerine ait katalog ve broşürleri burada bulabilirsiniz.",
     "download": "İndir"
-  }
+  },
+  "products": "Ürünler"
 }

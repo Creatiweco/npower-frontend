@@ -6,24 +6,24 @@ import Loader from "../Components/Loader";
 import GeneratorDesc from "../Components/GeneratorDesc";
 import { useTranslation } from "react-i18next";
 
-const DieselGenerator = () => {
+const MediumDieselGenerator = () => {
   const { data, loading, error} = useFetch(
-    "/generator-page?populate=DieselGenerators.TabImage&populate=DieselGenerators.TableRows&populate=DieselGenerators.TableRows.katalog"
+    "/generator-page?populate=DieselGeneratorsMedium.TabImage&populate=DieselGeneratorsMedium.TableRows&populate=DieselGeneratorsMedium.TableRows.katalog"
   );
   const { t } = useTranslation();
   
   if (loading) return <div className="loader-container"><Loader/></div>;
   if (error) return <div>Error: {error.message}</div>;
   
-  const dieselGenerators = data.DieselGenerators || [];
+  const dieselGeneratorsMedium = data.DieselGeneratorsMedium || [];
   
-  const tabs = dieselGenerators.map((tab) => ({
+  const tabs = dieselGeneratorsMedium.map((tab) => ({
     key: tab.TabKey,
     label: tab.TabName,
     image: `${tab.TabImage.url}`,
   }));
   
-  const tableData = dieselGenerators.reduce((acc, tab) => {
+  const tableData = dieselGeneratorsMedium.reduce((acc, tab) => {
     acc[tab.TabKey] = tab.TableRows.map((row) => ({
       id: row.id,
       model: row.Model,
@@ -39,15 +39,13 @@ const DieselGenerator = () => {
     
   }, {});
 
-  console.log(tableData.katalogLink);
-  
   return (
     <>
-      <PageTitle title={t("generator.dieselTitle")} />
+      <PageTitle title={t("generator.dieselTitleMedium")} />
       <GeneratorTab tabs={tabs} tableData={tableData} />
       <GeneratorDesc/>
     </>
   );
 };
 
-export default DieselGenerator;
+export default MediumDieselGenerator;

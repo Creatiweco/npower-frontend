@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const PortatifGeerator = () => {
   const { data, loading, error} = useFetch(
-    "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.Image&populate=PortableGenerator.TableRows.katalog"
+    "/generator-page?populate=PortableGenerator.TabImage&populate=PortableGenerator.TableRows&populate=PortableGenerator.TableRows.katalog"
   );
   const { t } = useTranslation();
 
@@ -31,7 +31,7 @@ const PortatifGeerator = () => {
       katalogLink: row.KatalogLink,
       detayLink: row.DetayLink,
       content: row.Content,
-      image: row.Image?.url ? `${row.Image.url}` : "",
+      // image: row.Image?.url ? `${row.Image.url}` : "",
     }));
     return acc;
   }, {});

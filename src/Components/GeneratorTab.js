@@ -123,10 +123,10 @@ const GeneratorTab = ({ tabs, tableData }) => {
                       </a>
                     </div>
                     <div className="row">
-                      <div className="col-lg-6 col-12 tab-details-image">
+                      {/* <div className="col-lg-6 col-12 tab-details-image">
                         <img src={selectedDetail.image} alt={selectedDetail.model} />
-                      </div>
-                      <div className="col-lg-6 col-12 tab-details-description">
+                      </div> */}
+                      <div className="col-lg-12 col-12 tab-details-description">
                         {selectedDetail.content.map((content, index) => (
                           <p key={index}>{content.children[0].text}</p>
                         ))}

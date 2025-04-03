@@ -8,7 +8,7 @@ import Loader from '../Components/Loader';
 
 function SismikTitresim() {
   const { data, loading, error} = useFetch(
-    '/seismic-vibration-page?populate=MainImage&populate=RightImage&populate=BrandLogos.Image'
+    '/seismic-vibration-page?populate=Image&populate=secondImage'
   );
 
   if (loading) return <div className="loader-container"><Loader/></div>;
@@ -20,8 +20,8 @@ function SismikTitresim() {
     LeftSection,
     FeaturesLeft,
     FeaturesRight,
-    MainImage,
-    RightImage, 
+    Image,
+    secondImage, 
   } = data;
 
   const contentText = Content?.map((section) => section.children[0]?.text).join('<br><br>') || '';
@@ -33,7 +33,7 @@ function SismikTitresim() {
     <>
       <PageTitle title={Title} />
       <ProductMain 
-        image={`${MainImage[0]?.url}`} 
+        image={`${Image.url}`} 
         content={contentText} 
       />
 
@@ -44,7 +44,7 @@ function SismikTitresim() {
               <p dangerouslySetInnerHTML={{ __html: leftSectionText }} />
             </div>
             <div className="col-lg-6 col-12 siesmic-right">
-              <img src={`${RightImage[0]?.url}`} alt='' />
+              <img src={`${secondImage.url}`} alt='' />
             </div>
           </div>
         </div>

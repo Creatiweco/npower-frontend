@@ -2272,6 +2272,39 @@ h3 {
 
 }
 
+/*Products*/
+
+.product-wrapper{
+    padding:80px 0 80px 0;
+
+    .product-item{
+        margin-bottom: 40px;
+        justify-content: center;
+        background-color: rgb(228, 242, 243);
+        padding: 25px 0;
+
+        .product-content{
+            display: flex;
+            align-items: center;
+
+            h3{
+                color: #007A80;
+                padding-bottom: 12px;
+            }
+
+            img{
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+        .reverse {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
 
 
 @media (max-width: 480px) {
