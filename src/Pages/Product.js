@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 function Product() {
   const { t } = useTranslation();
 
-  const { data, loading, error } = useFetch('/products-page?populate=ProductsCounter.Link2&populate=ProductsCounter.CounterItem&populate=ProductsCounter.CounterItem.Icon');
+  const { data, loading, error } = useFetch('/products-page?populate=ProductItems.Icon&populate=ProductsCounter.Link2&populate=ProductsCounter.CounterItem&populate=ProductsCounter.CounterItem.Icon');
 
   if (loading) return <div className="loader-container"><Loader /></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -21,10 +21,10 @@ function Product() {
   ).join(' ') || '';
 
   // Products (CounterItem'ları ürün gibi kullanıyoruz)
-  const products = data?.ProductsCounter?.CounterItem?.map((item) => ({
+  const products = data?.ProductItems?.map((item) => ({
     id: item.id,
     title: item.Title,
-    value: item.Value,
+    value: item.Content,
     image: item.Icon?.[0]?.url || '',
   })) || [];
 
