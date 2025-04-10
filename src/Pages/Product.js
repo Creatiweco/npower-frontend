@@ -25,8 +25,10 @@ function Product() {
     id: item.id,
     title: item.Title,
     value: item.Content,
-    image: item.Icon?.[0]?.url || '',
+    image: item.Icon?.url || '',
   })) || [];
+  
+  console.log(products);
 
   const counterSection = data?.ProductsCounter || {};
 
