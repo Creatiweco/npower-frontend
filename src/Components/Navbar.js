@@ -117,19 +117,19 @@ const Navbar = () => {
                   <Link to="#" onClick={(e) => e.preventDefault()}>{t('navbar.generators')}</Link>
                   <ul className='dropdown'>
                     <li className='dropdown-item'>
-                      <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
+                      <div className='dropdown-icon'><img src='/Assets/image/icon/diesel-generator-icon.svg' alt='' /></div>
                       <Link to="/diesel-generator-low-voltage">{t('navbar.diesel')}</Link>
                     </li>
                     <li className='dropdown-item'>
-                      <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
+                      <div className='dropdown-icon'><img src='/Assets/image/icon/diesel-generator-icon.svg' alt='' /></div>
                       <Link to="/diesel-generator-medium-voltage">{t('navbar.dieselMedium')}</Link>
                     </li>
                     <li className='dropdown-item'>
-                      <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
+                      <div className='dropdown-icon'><img src='/Assets/image/icon/natural-gas-icon.svg' alt='' /></div>
                       <Link to="/gas-generator">{t('navbar.gas')}</Link>
                     </li>
                     <li className='dropdown-item'>
-                      <div className='dropdown-icon'><img src='/Assets/image/icon/generator_icon.svg' alt='' /></div>
+                      <div className='dropdown-icon'><img src='/Assets/image/icon/n-icon-portable.png' alt='' /></div>
                       <Link to="/portable-generator">{t('navbar.portable')}</Link>
                     </li>
                   </ul>
