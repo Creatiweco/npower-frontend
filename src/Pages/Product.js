@@ -15,16 +15,11 @@ function Product() {
   if (loading) return <div className="loader-container"><Loader /></div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  // Description
-  // const description = data?.ProductsCounter?.Description?.map((desc) =>
-  //   desc.children?.map((child) => child.text).join(' ')
-  // ).join(' ') || '';
-
   // Products (CounterItem'ları ürün gibi kullanıyoruz)
   const products = data?.ProductItems?.map((item) => ({
     id: item.id,
     title: item.Title,
-    value: item.Content,
+    value: item.Content?.[0]?.children?.[0]?.text,
     image: item.Icon?.url || '',
   })) || [];
   
