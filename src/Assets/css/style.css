@@ -453,13 +453,14 @@ footer {
   padding: 0 12px;
   border-radius: 20px;
   z-index: 1;
+  margin-bottom: 6px;
 }
 .hero-grid .hero-item .hero-desc {
   display: none;
   transition: all 0.3s ease;
 }
 .hero-grid .hero-item img {
-  height: 105px;
+  height: 90%;
   width: auto;
   z-index: 1;
 }
