@@ -215,6 +215,9 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+.dropdown-link .dropdown .dropdown-item .dropdown-icon img {
+  filter: brightness(0);
+}
 .dropdown-link .dropdown .dropdown-item:hover {
   background-color: #E7F4F5;
   border-radius: 8px;
