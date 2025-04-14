@@ -16,9 +16,9 @@ function Product() {
   if (error) return <div>Error: {error.message}</div>;
 
   // Description
-  const description = data?.ProductsCounter?.Description?.map((desc) =>
-    desc.children?.map((child) => child.text).join(' ')
-  ).join(' ') || '';
+  // const description = data?.ProductsCounter?.Description?.map((desc) =>
+  //   desc.children?.map((child) => child.text).join(' ')
+  // ).join(' ') || '';
 
   // Products (CounterItem'ları ürün gibi kullanıyoruz)
   const products = data?.ProductItems?.map((item) => ({
