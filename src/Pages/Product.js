@@ -51,7 +51,7 @@ function Product() {
               <div className={`row product-content ${index % 2 === 1 ? 'reverse' : ''}`}>
                 <div className='col-lg-8'>
                   <h3>{product.title}</h3>
-                  <p>{description}</p> {/* İstersen burada her ürün için özel description ekleyebilirsin */}
+                  <p>{product.value}</p>
                 </div>
                 <div className='col-lg-1'></div>
                 <div className='col-lg-3 d-flex justify-content-center'>
